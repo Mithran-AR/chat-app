@@ -1,3 +1,4 @@
+import 'package:aiapp/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:intl/intl.dart';
@@ -29,8 +30,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   TextEditingController promptController = TextEditingController();
   ScrollController scrollController = ScrollController(); // Add a ScrollController
-  static const apiKey = "AIzaSyDl45NVGFC1hFXxT9TXTQD3Oopx_5z3uHY";
-  final model = GenerativeModel(model: "gemini-pro", apiKey: apiKey);
+
+  final model = GenerativeModel(model: "gemini-pro", apiKey: ApiKeys.apiKey);
   final List<ModelMessage> prompts = [];
   final bool isPrompt = true;
 
